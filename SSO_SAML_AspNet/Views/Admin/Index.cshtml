@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Admin Page";
+}
+@model string
+
+<div class="jumbotron">
+    @if (Model != null)
+    {
+        <h1>Admin logged-in user info</h1>
+        <p>Email : @Model</p>
+    }
+</div>

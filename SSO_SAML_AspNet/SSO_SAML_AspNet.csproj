@@ -45,10 +45,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ITfoxtec.Identity.Saml2, Version=4.7.1.0, Culture=neutral, PublicKeyToken=2dd6b1fbf7645f92, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITfoxtec.Identity.Saml2.4.7.1\lib\net472\ITfoxtec.Identity.Saml2.dll</HintPath>
+    </Reference>
+    <Reference Include="ITfoxtec.Identity.Saml2.Mvc, Version=4.7.1.0, Culture=neutral, PublicKeyToken=2dd6b1fbf7645f92, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITfoxtec.Identity.Saml2.Mvc.4.7.1\lib\net472\ITfoxtec.Identity.Saml2.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Services" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,10 +130,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\FrontendController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\IdentityConfigHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +175,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Frontend\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
